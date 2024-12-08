@@ -13,9 +13,689 @@
     --foreground: #ededed;
   }
 }
+.container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center; /* Centers items horizontally */
+  align-items: center; /* Centers items vertically */
+  flex-direction: column; /* Ensures the items stack vertically */
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping of cards when the screen is small */
+  justify-content: space-between; /* Space between cards */
+}
+
+.card-title{
+  color: #2A254B;
+}
+
+.view-collection-button1 {
+  border: 4px solid;
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: rgb(42, 37, 75); /* Button text color matching background */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  align-self: center; /* Centers the button within the .cards container */
+}
+
+.popular{
+  width: 330px;
+  height: 45px;
+  top: 64px;
+  left: 80px;
+  font: 400 32px "poppins";
+  line-height: 39px;
+  color:rgb(42, 37, 75);
+}
+
+
+.ceramics{
+  width: 217px;
+  height: 39px;
+  top: 80px;
+  left: 80px;
+  font: 400 32px "poppins";
+  line-height: 39px;
+  color:rgb(42, 37, 75);
+}
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* header css strat */
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header-title {
+  font-size: 2rem;
+  text-align: center; /* Optional: to center the text within the header */
+  margin: 0;
+}
+
+.header-link {
+  text-decoration: none;
+  color: #000; /* Black color for the links */
+  margin: 0 10px; /* Space between the links */
+}
+
+.header-link:hover {
+  color: #007BFF; /* Change color on hover */
+}
+
+/* header css end */
+
+/* banner css start */
+
+/* Banner Section with two columns */
+/* Banner Section with two columns */
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh; /* Full viewport height */
+  padding: 0 5%; /* Space on the left and right sides */
+  background-color: rgb(42, 37, 75); /* Updated background color */
+  color: white; /* Text color */
+}
+
+/* Text Section (70% width) */
+.text-section {
+  flex: 0 0 70%;
+  padding-right: 3rem; /* Space between text and image */
+}
+
+.title {
+  font-family: 'Arial', sans-serif; /* Example font family */
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-family: 'Arial', sans-serif;
+  font-size: 1.2rem;
+  margin-top: 3rem;
+}
+
+.view-collection-button {
+  display: flex;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: rgb(42, 37, 75); /* Button text color matching background */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+.view-collection-button:hover {
+  background-color: #47C853;
+}
+
+/* Image Section (30% width) */
+.image-section {
+  flex: 0 0 35%;
+  height: 100%;
+}
+
+.furniture-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+/* banner css end */
+.features {
+  background-color: #ffffff;
+  padding: 60px 20px;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.features-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly larger minimum column size */
+  gap: 30px;
+}
+
+.feature-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #4A90E2;  /* Updated to a visible color */
+  margin-bottom: 15px;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.signup-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(42, 37, 75);;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.signup-button:hover {
+  background-color: rgb(42, 37, 75);;
+}
+
+.signup-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.signup-input {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.signup-button {
+  cursor: pointer;
+}
+
+
+.section-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.text-container {
+  width: 50%;
+  padding-right: 2rem;
+}
+
+.image-container {
+  width: 50%;
+  padding-left: 2rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.footer {
+  background-color: #2e2a5a;
+  color: #fff;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-heading {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 1rem;
+}
+
+.footer-button {
+  background-color: #a1a1a1;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.footer-button:hover {
+  background-color: #2e2a5a;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-socials svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.footer-socials svg:hover {
+  color: #fff;
+}
+
+.banner1 {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh; /* Full viewport height */
+  background-color: rgb(42, 37, 75); /* Background color */
+  color: white; /* Text color */
+}
+
+/* Text Section (50% width) */
+.text-section {
+  flex: 0 0 50%;
+  padding: 0; /* Removed padding */
+}
+
+.title {
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0; /* Remove margin */
+}
+
+.view-collection-button {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: white;
+  color: rgb(42, 37, 75); /* Button text color matching background */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 0; /* Remove any default margin */
+}
+
+.view-collection-button:hover {
+  background-color: #47C853;
+}
+
+/* Image Section (50% width) */
+.image-section {
+  flex: 0 0 50%;
+  height: 100%;
+  padding: 0; /* Remove padding */
+}
+
+
+.product-details {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 30px; /* Adds space between the image and the description */
+}
+
+.product-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.image-section {
+  flex: 1; /* Takes up 50% width */
+  max-width: 500px; /* Optional: To prevent it from getting too large */
+}
+
+.description-section {
+  flex: 1.5; /* Takes up more space than the image */
+  padding-left: 20px;
+  max-width: 600px;
+}
+
+.product-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product-description {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.features-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.features-list li {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 5px;
+}
+
+.product-dimensions p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px; /* Adds space between dimensions and quantity */
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.quantity input {
+  width: 50px;
+  margin-left: 5px;
+}
+
+.add-to-cart-button {
+  padding: 10px 20px;
+  background-color: #2e2a5a;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart-button:hover {
+  background-color: #92446a;
+}
+
+
+.banner2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px; /* Adjust padding */
+  background-color: #f5f5f5; /* Light gray background */
+  height: 150px; /* Adjust height as needed */
+}
+
+.text-section {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.button-section {
+  flex: 1;
+  text-align: right;
+}
+
+.button-section button {
+  background-color: #1e3a8a; /* Blue color */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-section button:hover {
+  background-color: #2563eb; /* Lighter blue on hover */
+}
+
+
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.image-container {
+  flex: 1;
+  max-width: 50%; /* Ensures the image takes 50% of the width */
+}
+
+.content-container {
+  flex: 1;
+  max-width: 50%; /* Ensures the content takes 50% of the width */
+}
+
+.content-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.content-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.content-button {
+  background-color: #1e3a8a; /* Blue button color */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.content-button:hover {
+  background-color: #2563eb; /* Lighter blue on hover */
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column; /* Stack on smaller screens */
+    text-align: center;
+  }
+
+  .image-container,
+  .content-container {
+    max-width: 100%; /* Full width on smaller screens */
+  }
+}
+
+.filter-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows elements to wrap if space is limited */
+  justify-content: space-between; /* Distribute the elements evenly */
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.filter-container h2 {
+  width: 100%; /* Make the header span full width */
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column; /* Keeps label and input in a vertical stack */
+  width: 22%; /* Adjust width of each filter to fit on a single line */
+  margin-bottom: 1rem;
+}
+
+.filter-section label {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.filter-section select,
+.filter-section input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filter-section p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+
+.shopping-cart {
+  padding: 20px;
+}
+
+.cart-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.product-image {
+  width: 100px;
+  margin-right: 20px;
+}
+
+.product-image img {
+  width: 100%;
+  height: auto;
+}
+
+.product-image .dimensions {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+}
+
+.product-details h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.product-details p {
+  font-size: 14px;
+  color: #888;
+}
+
+.quantity input {
+  width: 40px;
+  text-align: center;
+}
+
+.total {
+  font-weight: bold;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-summary p {
+  margin-bottom: 5px;
+}
+
+.cart-summary button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }

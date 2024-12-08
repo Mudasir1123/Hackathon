@@ -1,101 +1,128 @@
-import Image from "next/image";
+import Link from "next/link";
+import Image from 'next/image';
+import Features from "./components/Features";
+import "./globals.css";
+import RightImage from './Images/Right Image.png';
+import sofa from './Images/sofa.png';
+import banner1 from './Images/banner-1.png';
+import black from './Images/black.png';
+import bottom from './Images/bottom.png';
+import Images from "./components/images";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      <section className="banner py-8 px-4 md:px-16 lg:px-32">
+        <div className="text-section max-w-2xl mx-auto text-center md:text-left">
+          <h1 className="title text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            The Furniture Brand for the <br /> Future, with Timeless Designs
+          </h1>
+          <button className="view-collection-button bg-blue-600 text-white py-2 px-6 rounded-lg mb-4 md:mb-0">
+            View Collection
+          </button>
+          <p className="description text-sm md:text-base text-gray-700 max-w-xl mx-auto md:mx-0">
+            A new era in eco-friendly furniture with Avelon, the French luxury retail brand.
+            With nice fonts, tasteful colors, and a beautiful way to display things digitally using modern web technologies.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <div className="image-section mt-8 md:mt-0">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src={RightImage}
+            alt="Right Image"
+            className="w-full h-auto object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+      </section>
+
+      <Features />
+
+      <div className="ceramics text-center my-10 font-bold text-xl">New Ceramics</div>
+      <Images />
+
+      <div className="popular text-center font-bold text-xl my-10">Our Popular Products</div>
+
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Card 1 */}
+          <div className="card shadow-lg rounded-lg overflow-hidden">
+            <Image src={sofa} alt="Sofa" className="w-full h-72 object-cover" />
+            <div className="card-body p-4">
+              <h5 className="card-title text-lg font-semibold">The Popular Suede Sofa</h5>
+              <p className="card-text text-gray-600">Price: £980</p>
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="card shadow-lg rounded-lg overflow-hidden">
+            <Image src={banner1} alt="The Dandy Chair" className="w-full h-72 object-cover" />
+            <div className="card-body p-4">
+              <h5 className="card-title text-lg font-semibold">The Dandy Chair</h5>
+              <p className="card-text text-gray-600">Price: £250</p>
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="card shadow-lg rounded-lg overflow-hidden">
+            <Image src={black} alt="Black Chair" className="w-full h-72 object-cover" />
+            <div className="card-body p-4">
+              <h5 className="card-title text-lg font-semibold">The Black Chair</h5>
+              <p className="card-text text-gray-600">Price: £250</p>
+            </div>
+          </div>
+        </div>
+
+        {/* View Collection Button */}
+        <div className="text-center mt-8">
+          <button className="view-collection-button1 bg-blue-600 text-white py-2 px-6 rounded-lg">
+            View Collection
+          </button>
+        </div>
+      </div>
+
+      {/* Join the Club Section */}
+      <section className="flex flex-col items-center text-center py-10 bg-gray-100">
+        <h2 className="text-2xl font-bold text-gray-800 mb-4">Join the Club and Get the Benefits</h2>
+        <p className="mt-4 text-sm text-gray-500 mb-6">
+          Sign up for our newsletter and receive exclusive offers on new ranges, sales, pop-up stores, and more.
+        </p>
+
+        {/* Sign Up Form */}
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <input
+            type="email"
+            className="signup-input py-2 px-4 border rounded-lg w-full sm:w-auto"
+            placeholder="Enter your email"
+          />
+          <button
+            type="submit"
+            className="signup-button bg-blue-600 text-white py-2 px-6 rounded-lg"
+          >
+            Sign Up
+          </button>
+        </div>
+      </section>
+
+      {/* Studio to Global Brand Section */}
+      <section className="flex flex-col sm:flex-row items-center justify-between py-16 px-4 lg:px-16">
+        <div className="text-container w-full sm:w-1/2 px-8 text-center sm:text-left mb-8 sm:mb-0">
+          <h2 className="text-2xl font-bold mb-4">From a Studio in London to a Global Brand</h2>
+          <h3 className="text-xl font-semibold mb-6">With Over 400 Outlets</h3>
+          <p className="text-lg mb-4 text-justify">
+            When we started Avion, the idea was simple. Make high-quality furniture affordable and available for the mass market.
+          </p>
+          <p className="text-lg mb-4 text-justify">
+            Handmade, and lovingly crafted furniture and homeware is what we live, breathe, and design so our Chelsea boutique became the hotbed for the London interior design community.
+          </p>
+        </div>
+
+        <div className="image-container w-full sm:w-1/2 px-8">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src={bottom}
+            alt="Studio to Global"
+            className="w-full h-auto object-cover"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+    </>
   );
 }
