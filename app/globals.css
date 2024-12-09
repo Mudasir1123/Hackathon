@@ -13,6 +13,66 @@
     --foreground: #ededed;
   }
 }
+
+/* Card Styling */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Body */
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-title:hover {
+  color: #007BFF;
+}
+
+/* Button Styling */
+button {
+  background: linear-gradient(90deg, #1E3A8A, #0D9488);
+  color: #fff;
+  border-radius: 0.375rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #1E40AF, #0F766E);
+}
+
+/* Responsive Image */
+.card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 16rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive grid layout */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+}
 .container {
   margin-top: 2rem;
   display: flex;
@@ -74,117 +134,328 @@ body {
 }
 
 /* header css strat */
-.header {
+/* Header Styling */
+/* Custom Header Styling */
+.custom-header {
+  background-color: #ca0000; /* Red background */
+  color: white;
+  padding: 1rem 2rem; /* Padding with left and right spacing */
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.header-title {
-  font-size: 2rem;
-  text-align: center; /* Optional: to center the text within the header */
-  margin: 0;
+.logo {
+  font-size: 2.5rem; /* Larger logo text */
+  font-weight: 900; /* Heavier weight */
 }
 
-.header-link {
+.logo-link {
   text-decoration: none;
-  color: #000; /* Black color for the links */
-  margin: 0 10px; /* Space between the links */
+  color: white;
+  transition: color 0.3s ease;
 }
 
-.header-link:hover {
-  color: #007BFF; /* Change color on hover */
+.logo-link:hover {
+  color: #d1d1d1; /* Slightly lighter gray on hover */
 }
+
+.navigation-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Increase space between links */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white; /* White text for nav items */
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d1d1d1; /* Slightly lighter gray on hover */
+}
+
+.mobile-menu-button {
+  display: block; /* Show the mobile menu button */
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column; /* Stack items vertically for mobile view */
+    align-items: flex-start;
+  }
+
+  .navigation-links {
+    flex-direction: column; /* Stack the navigation links vertically */
+    gap: 1rem; /* Add space between mobile menu items */
+  }
+
+  .logo {
+    margin-bottom: 1rem; /* Add space below logo on small screens */
+  }
+
+  .mobile-menu-button {
+    display: block; /* Ensure the mobile menu button is visible on smaller screens */
+  }
+}
+
+
 
 /* header css end */
 
-/* banner css start */
-
-/* Banner Section with two columns */
-/* Banner Section with two columns */
-.banner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 100vh; /* Full viewport height */
-  padding: 0 5%; /* Space on the left and right sides */
-  background-color: rgb(42, 37, 75); /* Updated background color */
-  color: white; /* Text color */
+/* Unique Header Styling */
+.unique-header {
+  background-color: #1e2a47;  /* Dark blue background */
+  padding: 1rem 2rem;
 }
 
-/* Text Section (70% width) */
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.brand-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.brand-link:hover {
+  color: #a1a1a1;  /* Light gray on hover */
+}
+
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #a1a1a1;  /* Light gray color when hovering */
+}
+
+.nav-icon {
+  margin-right: 0.5rem;  /* Space between icon and text */
+}
+
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;  /* Hide the navigation links on mobile */
+  }
+
+  /* Add Mobile Menu Button for smaller screens */
+  .mobile-menu-button {
+    display: block; /* Show mobile menu icon */
+  }
+}
+
+/* banner css start */
+
+
+
+
+/* Banner Section */
+.banner {
+  background-color: #f2f2f2;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .text-section {
-  flex: 0 0 70%;
-  padding-right: 3rem; /* Space between text and image */
+  max-width: 700px;
+  margin-bottom: 2rem;
 }
 
 .title {
-  font-family: 'Arial', sans-serif; /* Example font family */
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  color: #333;
 }
 
 .description {
-  font-family: 'Arial', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  color: #666;
+  margin-top: 1rem;
+}
+
+.view-collection-button,
+.view-collection-button1 {
+  background-color: #007BFF;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s;
+}
+
+.view-collection-button:hover,
+.view-collection-button1:hover {
+  background-color: #0056b3;
+}
+
+/* Ceramics and Popular Products */
+.ceramics, .popular {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
   margin-top: 3rem;
 }
 
-.view-collection-button {
-  display: flex;
-  padding: 1rem 2rem;
-  background-color: white;
-  color: rgb(42, 37, 75); /* Button text color matching background */
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-}
-
-.view-collection-button:hover {
-  background-color: #47C853;
-}
-
-/* Image Section (30% width) */
-.image-section {
-  flex: 0 0 35%;
-  height: 100%;
-}
-
-.furniture-image {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-
-/* banner css end */
-.features {
-  background-color: #ffffff;
-  padding: 60px 20px;
-}
-
-.features-container {
+/* Card Layout */
+.container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 2rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  padding: 1rem;
   text-align: center;
 }
 
-.features-heading {
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Join the Club Section */
+.signup-input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 300px;
+}
+
+.signup-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+/* Studio to Global Section */
+.studio-global-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 3rem 1rem;
+}
+
+.studio-global-section .text-container {
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.studio-global-section .image-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .banner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .text-section {
+    text-align: left;
+    max-width: 50%;
+  }
+
+  .image-section {
+    max-width: 45%;
+  }
+
+  .studio-global-section {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .studio-global-section .text-container {
+    text-align: left;
+  }
+
+
+}
+
+/* Section Heading */
+.section-title {
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 40px;
   color: #333;
 }
 
-.features-grid {
+/* Grid for Features */
+.features-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Slightly larger minimum column size */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
-.feature-item {
+/* Individual Feature Styling */
+.feature-card {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -193,21 +464,31 @@ body {
 
 .feature-icon {
   font-size: 3rem;
-  color: #4A90E2;  /* Updated to a visible color */
+  color: #4A90E2; /* Blue color for icons */
   margin-bottom: 15px;
 }
 
-.feature-title {
+.feature-header {
   font-size: 1.25rem;
   font-weight: 600;
   color: #333;
   margin-bottom: 10px;
 }
 
-.feature-description {
+.feature-text {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
+}
+
+/* Color Variables (Optional for easier future adjustments) */
+:root {
+  --dark-gray: #333333;
+  --medium-gray: #666666;
+  --light-gray: #f8f8f8;
+  --blue-color: #4A90E2;
+  --yellow-color: #F4A300;
+  --green-color: #28a745;
 }
 
 .signup-button {
@@ -263,31 +544,35 @@ img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
+/* General Footer Container */
 .footer {
   background-color: #2e2a5a;
   color: #fff;
   padding: 40px 20px;
 }
 
+/* Footer Grid Container */
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Ensures responsiveness */
+  gap: 30px; /* More space between sections */
   margin-bottom: 40px;
 }
 
+/* Footer Section Styling */
 .footer-section {
   display: flex;
   flex-direction: column;
 }
 
+/* Footer Heading Styling */
 .footer-heading {
   font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 15px;
 }
 
+/* Footer Links List */
 .footer-links {
   list-style: none;
   padding: 0;
@@ -307,6 +592,7 @@ img {
   text-decoration: underline;
 }
 
+/* Mailing List Form */
 .footer-form {
   display: flex;
 }
@@ -317,6 +603,7 @@ img {
   border: none;
   border-radius: 4px 0 0 4px;
   font-size: 1rem;
+  background-color: #333; /* Slight background color for input */
 }
 
 .footer-button {
@@ -332,12 +619,14 @@ img {
   background-color: #2e2a5a;
 }
 
+/* Footer Bottom Styling */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 20px;
+  margin-top: 20px; /* Adds space above bottom section */
 }
 
 .footer-socials {
@@ -354,28 +643,112 @@ img {
   color: #fff;
 }
 
+/* Hero Section */
+.hero-section {
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+/* Banner Section */
 .banner1 {
   margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100vh; /* Full viewport height */
-  background-color: rgb(42, 37, 75); /* Background color */
-  color: white; /* Text color */
+  height: 100vh;
+  background-color: rgb(42, 37, 75);
+  color: white;
+  padding: 0 20px; /* Added padding for spacing */
 }
 
-/* Text Section (50% width) */
 .text-section {
   flex: 0 0 50%;
-  padding: 0; /* Removed padding */
+  padding: 20px; /* Added padding for better text spacing */
 }
 
 .title {
   font-family: 'Arial', sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 0; /* Remove margin */
+  margin: 0;
 }
+
+.view-collection-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.view-collection-button:hover {
+  background-color: #0056b3;
+}
+
+.image-section {
+  flex: 0 0 50%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+/* Join the Club Section */
+.signup-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.signup-input {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  width: 100%;
+  max-width: 400px;
+}
+
+.signup-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.signup-button:hover {
+  background-color: #0056b3;
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+  .banner1 {
+    height: 50vh;
+  }
+
+  .text-section {
+    flex: 0 0 60%;
+  }
+
+  .image-section {
+    flex: 0 0 40%;
+  }
+
+  .signup-container {
+    gap: 2rem;
+  }
+}
+
 
 .view-collection-button {
   display: inline-block;
@@ -417,12 +790,15 @@ img {
 }
 
 .image-section {
-  flex: 1; /* Takes up 50% width */
+  flex: 1;
   max-width: 500px; /* Optional: To prevent it from getting too large */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .description-section {
-  flex: 1.5; /* Takes up more space than the image */
+  flex: 1.5;
   padding-left: 20px;
   max-width: 600px;
 }
@@ -447,8 +823,106 @@ img {
 
 .features-list {
   list-style-type: none;
-  padding: 0;
+  padding-left: 0;
+}
+
+.features-list li {
+  margin-bottom: 10px;
+}
+
+.product-dimensions {
   margin-bottom: 20px;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.quantity input {
+  padding: 8px;
+  width: 50px;
+  border: 1px solid #ccc;
+}
+
+.add-to-cart-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .product-details {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .description-section {
+    max-width: 100%;
+    padding-left: 0;
+  }
+
+  .product-title {
+    font-size: 1.5rem;
+  }
+
+  .product-price {
+    font-size: 1.2rem;
+  }
+
+  .product-description {
+    font-size: 1rem;
+  }
+
+  .quantity input {
+    width: 40px;
+  }
+
+  .add-to-cart-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-title {
+    font-size: 1.3rem;
+  }
+
+  .product-price {
+    font-size: 1rem;
+  }
+
+  .product-description {
+    font-size: 0.9rem;
+  }
+
+  .quantity input {
+    width: 35px;
+  }
+
+  .add-to-cart-button {
+    width: 100%;
+  }
 }
 
 .features-list li {

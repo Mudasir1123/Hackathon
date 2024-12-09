@@ -1,33 +1,33 @@
 import Link from 'next/link';
-import { FaUserAlt, FaShoppingCart } from 'react-icons/fa'; // Import icons
+import { FaUserAlt, FaShoppingCart } from 'react-icons/fa';
 import React from 'react';
 import "../globals.css";
 
-export default function Header_1() {
+export default function UniqueHeader() {
   return (
-    <header className="bg-gray-800 text-white p-4">
-      <div className="container mx-auto flex justify-between items-center">
+    <header className="unique-header bg-dark-blue text-white py-4">
+      <div className="header-content mx-auto flex justify-between items-center">
         {/* Logo Section */}
-        <div className="text-2xl font-bold">
-          <Link href="/">Avion</Link>
+        <div className="brand-logo text-3xl font-bold">
+          <Link href="/" className="brand-link hover:text-gray-400">Avion</Link>
         </div>
 
-        {/* Navigation Links */}
-        <nav className="flex items-center space-x-6">
+        {/* Navigation Section */}
+        <nav className="main-nav flex items-center space-x-8">
           {/* About Link */}
-          <Link href="/About" className="flex items-center space-x-2 hover:text-gray-400 transition duration-200 ease-in-out">
+          <Link href="/About" className="nav-link flex items-center space-x-2 hover:text-gray-400 transition duration-200 ease-in-out">
             <span>About</span>
           </Link>
 
           {/* Profile Link */}
-          <Link href="/profile" className="flex items-center space-x-2 hover:text-gray-400 transition duration-200 ease-in-out">
-            <FaUserAlt className="text-white" />
+          <Link href="/profile" className="nav-link flex items-center space-x-2 hover:text-gray-400 transition duration-200 ease-in-out">
+            <FaUserAlt className="nav-icon text-white" />
             <span>Profile</span>
           </Link>
 
           {/* Cart Link */}
-          <Link href="/Cart" className="flex items-center space-x-2 hover:text-gray-400 transition duration-200 ease-in-out">
-            <FaShoppingCart className="text-white" />
+          <Link href="/Cart" className="nav-link flex items-center space-x-2 hover:text-gray-400 transition duration-200 ease-in-out">
+            <FaShoppingCart className="nav-icon text-white" />
             <span>Cart</span>
           </Link>
         </nav>
